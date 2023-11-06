@@ -12,7 +12,7 @@ export default function Home() {
     <div className={styles.indexMain}>
    
     <div className={styles.logo}> 
-    <img src='public/icons/logo.png' /> 
+    <img src='/icons/logo.png' /> 
     </div>
 
     <div className={styles.p}>
