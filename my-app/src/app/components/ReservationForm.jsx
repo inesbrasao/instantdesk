@@ -1,5 +1,4 @@
 import { useRouter } from "next/router";
-
 import React, { useState } from 'react';
 import styles from '../../styles/reservationForm.module.css'
 
@@ -30,7 +29,7 @@ export default function ReservationForm({id}) {
       const body = await res.json();
       setErrorMessage(body.message)
     } else if (res.status === 200){
-      router.push(`/home`)
+      router.push(`/payment/${id}`)
     }
   }
 
