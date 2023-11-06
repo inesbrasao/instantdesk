@@ -1,5 +1,5 @@
-import NavBar from "./app/components/NavBar";
 import { useEffect, useState } from "react"
+import NavBar from "../app/components/NavBar"
 
 export default function Home() {
     const [date, setDate] = useState()
