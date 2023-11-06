@@ -12,15 +12,16 @@ export default function Home() {
     <div className={styles.indexMain}>
    
     <div className={styles.logo}> 
-    <img src='/icons/logo.png' /> 
+    <img src='/icons/logo.png' width={300} height={300}/> 
     </div>
 
     <div className={styles.p}>
-      <p>Venha trabalhar no melhor cowork de lisboa! Reserve em dois clicks seu horário!</p>
+      <p>Venha trabalhar no melhor cowork de lisboa!</p>
+      <p> Reserve em dois clicks seu horário!</p>
     </div>
 
     <div className={styles.button}>
-      <button>reservar</button>  
+      <button className={styles.reserve}>reservar</button>  
     </div>
 
     </div>
