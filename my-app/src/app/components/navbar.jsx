@@ -10,9 +10,9 @@ export default function NavBar() {
 
    return <>
    <div className={styles.nav}>
-   <button className={styles.button} onClick={() => router.back('/')}><img className={styles.icon} src="/icons/search-button.svg" alt="" /></button>
-   <button className={styles.button} onClick={() => router.push('/home')}><img className={styles.icon} src="/icons/home-button.svg" alt="" /></button>
-   <button className={styles.button} onClick={() => router.push('/infopage')}><img className={styles.icon} src="/icons/return-button.svg" alt="" /></button>
+   <button className={styles.button} onClick={() => router.back('/')}><img className={styles.icon} src="/icons/backButton.svg" alt="" /></button>
+   <button className={styles.button} onClick={() => router.push('/home')}><img className={styles.icon} src="/icons/home.svg" alt="" /></button>
+   <button className={styles.button} onClick={() => router.push('/infopage')}><img className={styles.icon} src="/icons/infoPage.svg" alt="" /></button>
    </div>
    </>
 }
