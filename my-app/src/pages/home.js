@@ -1,4 +1,4 @@
-import NavBar from "@/app/components/NavBar";
+import NavBar from "./app/components/NavBar";
 import { useEffect, useState } from "react"
 
 export default function Home() {

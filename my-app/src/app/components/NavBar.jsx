@@ -1,5 +1,5 @@
 import { useRouter } from "next/router"
-import styles from "@/styles/navbar.module.css";
+import styles from "../../styles/navbar.module.css";
 // importa a biblioteca do next para mudar as pags
 // importa o estilo do css
 
