@@ -5,9 +5,9 @@ import { GetCollection } from "./mongo"
 // }
 // Function that creates a new document in the DB.
 async function createDocument(data) {
-    const collection = await GetCollection("cowork")
+    const collection = await GetCollection("cowork", "bookings")
     const result = await collection.insertOne(data)
-    return result
+    return result.insertedId
   }
 
 module.exports = {

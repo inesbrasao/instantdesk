@@ -1,0 +1,28 @@
+.disableHour{
+    width: 50px;
+    height: 50px;
+    font-size: medium;
+    border: 1px solid white;
+}
+
+.availableHour {
+    width: 50px;
+    height: 50px;
+    font-size: medium;
+    border: 1px solid white;
+}
+
+.hourWrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: space-evenly;
+}
+
+.type{
+    display: flex;
+}
+.options{
+    width: 100px;
+    height: 50px;
+}
