@@ -1,15 +1,39 @@
-
-
 .nav {
     padding: 0;
     margin: 0;
     display: flex;
-    width: 100vw;
-    height: 4rem;
+    width: 90vw;
+    height: 3rem;
     position: fixed;
-    background-color: white;
+    display: flex;
+    justify-content: space-around;
 }
 
-
-
-
+.button {
+    background-color: #eee;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    width: 10em;
+    border-radius: 1rem;
+    color: lightcoral;
+    box-shadow: 0 0.4rem #dfd9d9;
+    cursor: pointer;
+   }
+   
+   .button:active {
+    color: white;
+    box-shadow: 0 0.2rem #dfd9d9;
+    transform: translateY(0.2rem);
+   }
+   
+   .button:hover:not(:disabled) {
+    background: rgb(28, 4, 4);
+    color: white;
+    text-shadow: 0 0.1rem #bcb4b4;
+   }
+   
+   .button:disabled {
+    cursor: auto;
+    color: grey;
+   }
