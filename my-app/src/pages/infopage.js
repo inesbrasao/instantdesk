@@ -1,3 +1,4 @@
+import styles from'../styles/infopage.module.css'
 
 export default function Page() {
     return (
