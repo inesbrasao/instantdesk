@@ -1,24 +1,21 @@
 import { useRouter } from "next/router";
-import InputText from "./InputText";
-import React, { useEffect, useState } from 'react';
-import styles from '@/styles/profileControl.module.css'
-import Popup from "./Popup";
 
-// Params {
-//     artist: object
-// }
-// ProfileControl Component - Form for artist profile, the same component to edit the artist profile.
-export default function ReservationForm(props) {
+import React, { useEffect, useState } from 'react';
+import styles from '../../styles/reservationForm.module.css'
+
+
+
+export default function ReservationForm({date, hour, type}) {
   const router = useRouter()
   const [formData, setFormData] = useState()
-  const [hours, setHours] = useState()
+  
   
 
   useEffect(() => {
-    fetch('/cities.json')
+    fetch('/hours.json')
        .then(response => response.json())
-       .then(cities => {
-          setCities(cities);
+       .then(hours => {
+          setHours(hours);
 
        })
  }, []);
@@ -56,29 +53,9 @@ export default function ReservationForm(props) {
       return {...pForm, [name]: value}
     });
   };
-  const handleFileChange = (event) => {
-    const { name, value, files } = event.target;
-    setFormData(pForm => {
-      if (name === "path") {
-        return { ...pForm, [name]: files[0] }
-      }
-      return {...pForm, [name]: value}
-    });
-    handleImageChange(event)
-  };
+  
 
-  const handleImageChange = (e) => {
-    const file = e.target.files[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = () => {
-        setImageUrl(reader.result);
-      };
-      reader.readAsDataURL(file);
-    } else {
-      setImageUrl(null);
-    }
-  }
+ 
 
 
   const handleSubmit = async (event) => {
@@ -102,45 +79,33 @@ export default function ReservationForm(props) {
     }
   };
 
-  const changeState = (value) => {
-    setPopup(value)
-  }
 
 
-  return <div>{formData && cities &&
+
+  return <div>
   <div className={styles.ProfileControlContainer}>
     
 
     <form  className={styles.form} onSubmit={handleSubmit} id="profileControl">
-        <div className={styles.labelInputText} >Escolha sua foto de perfil</div>
-      <div className={styles.uploadImage}>
+        
+    <div className={styles.containerInputText} >
+      <label htmlFor="name" className={styles.labelInputText}>Nome</label> 
+      <input className={styles.inputText} type="text" id="name" name="name" value="name" onChange={handleChange}/>
+    </div>
+    <div className={styles.containerInputText} >
+      <label htmlFor="email" className={styles.labelInputText}>Email</label> 
+      <input className={styles.inputText} type="text" id="email" name="email" value="email" onChange={handleChange}/>
+    </div>
+    <div className={styles.containerInputText} >
+      <label htmlFor="phone" className={styles.labelInputText}>Telemóvel</label> 
+      <input className={styles.inputText} type="text" id="phone" name="phone" value="phone" onChange={handleChange}/>
+    </div>
       
-      <div className={styles.photoPreview}>
-       {imageUrl ? (<img src={imageUrl} alt="Preview" style={{ width: "100px", height: "100px"}} />) : (<div></div>)}  
-      </div>
-      <div>
-        <label className={styles.loadButton}>
-        Escolher Imagem
-        <input className={styles.loadButtonDefaut} type="file" name="path" onChange={(e) => handleFileChange(e)} />
-        </label>
-      </div></div>
-      <InputText name="name" label="Nome*" value={formData.name} onChange={handleChange} />
-      <InputText name="phone" label="Telemóvel" value={formData.phone} onChange={handleChange} />
-      <InputText name="shop" label="Estúdio" value={formData.shop} onChange={handleChange} />
-     
-      <div className={styles.containerInputText} >
-        <label htmlFor="city" className={styles.labelSelect}>Localidade</label> 
-        <select className={styles.select} name="city" onChange={handleChange}>
-            {cities.localidade.map((e, i) => i === 0 ? <option key={e} value="" disabled selected>{e}</option> : <option key={e} value={e}>{e}</option>)}
-        </select>
-      </div>
-      <InputText name="instagram" label="Instagram" value={formData.instagram} onChange={handleChange} />
-      {errorMessage ? <p className={styles.errorMessage}>{errorMessage}</p> : null}
       <button className={styles.button} type="submit" >Alterar</button>
     </form>
-    <button className={styles.buttonExcluir} onClick={() => setPopup(true)} type="submit" >Excluir Perfil</button>
-    {popup ? <Popup  data={artist} collection={"artists"} changeState={changeState} /> : null}
+  
 
-  </div>}</div>
+  </div>
+  </div>
 
 }

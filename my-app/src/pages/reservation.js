@@ -1,3 +1,5 @@
+import { useRouter } from "next/router"
+import ReservationForm from "../app/components/ReservationForm"
 
 
 
@@ -9,6 +11,6 @@ export default function Reservation() {
   
 
 
-  return <div>olá</div>
+  return <div><ReservationForm/></div>
 
 }
