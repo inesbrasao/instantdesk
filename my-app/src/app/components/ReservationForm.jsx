@@ -9,15 +9,19 @@ export default function ReservationForm({date, hour, type}) {
   const router = useRouter()
   const [formData, setFormData] = useState()
   
-  
 
- 
-
-  const optionsArtist = {
+  const id = router.asPath.split("/")[2]
+  const options = {
     method: 'POST',
-    headers: { 'Content-Type': "application/json" },
-    body: JSON.stringify(formData)
+    headers: {
+        'Content-Type': "application/json"
+    },
+    body: JSON.stringify({
+        "id": id
+    })
+
   }
+  
 
   async function updateProfile() {
 
