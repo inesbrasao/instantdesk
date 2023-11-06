@@ -6,8 +6,21 @@ import { GetCollection } from "./mongo"
 // Function that returns all the bookings in the date
 async function filterByDate(date) {
     const collection = await GetCollection("cowork", "bookings")
-    const result = await collection.find({date: date}).toArray()
-    return result
+    const hours = await collection.find({ date: date }).toArray();
+    const bookedHours = new Map()
+
+    for(let i = 0; i < hours.length; i++){
+        if(bookedHours.has(hours[i].hour)){
+            let value = bookedHours.get(hours[i].hour)
+            bookedHours.set(hours[i].hour, value + 1)
+        } else {
+            bookedHours.set(hours[i].hour, 1)
+        }
+    }
+    
+    const bh = Array.from(bookedHours)
+
+    return bh
   } 
 
 module.exports = {
