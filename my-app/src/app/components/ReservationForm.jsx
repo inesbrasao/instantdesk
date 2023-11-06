@@ -11,14 +11,7 @@ export default function ReservationForm({date, hour, type}) {
   
   
 
-  useEffect(() => {
-    fetch('/hours.json')
-       .then(response => response.json())
-       .then(hours => {
-          setHours(hours);
-
-       })
- }, []);
+ 
 
   const optionsArtist = {
     method: 'POST',
@@ -90,15 +83,15 @@ export default function ReservationForm({date, hour, type}) {
         
     <div className={styles.containerInputText} >
       <label htmlFor="name" className={styles.labelInputText}>Nome</label> 
-      <input className={styles.inputText} type="text" id="name" name="name" value="name" onChange={handleChange}/>
+      <input className={styles.inputText} type="text" id="name" name="name"  onChange={handleChange}/>
     </div>
     <div className={styles.containerInputText} >
       <label htmlFor="email" className={styles.labelInputText}>Email</label> 
-      <input className={styles.inputText} type="text" id="email" name="email" value="email" onChange={handleChange}/>
+      <input className={styles.inputText} type="text" id="email" name="email"  onChange={handleChange}/>
     </div>
     <div className={styles.containerInputText} >
       <label htmlFor="phone" className={styles.labelInputText}>Telemóvel</label> 
-      <input className={styles.inputText} type="text" id="phone" name="phone" value="phone" onChange={handleChange}/>
+      <input className={styles.inputText} type="text" id="phone" name="phone"  onChange={handleChange}/>
     </div>
       
       <button className={styles.button} type="submit" >Alterar</button>
