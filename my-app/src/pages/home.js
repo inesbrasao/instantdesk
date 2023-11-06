@@ -1,3 +1,4 @@
+import NavBar from "@/app/components/navbar";
 import { useState } from "react"
 
 export default function Home() {
@@ -8,12 +9,16 @@ export default function Home() {
       };
     
       return (
+        <>
         <div>
           <input
             type="date"
             onChange={handleChange}
           />
           <p>Selected Date: {date}</p>
+          
         </div>
+        <NavBar/>
+        </>
       );
 };
