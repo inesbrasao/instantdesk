@@ -116,6 +116,7 @@ export default function Home() {
             </div>
             : null}
         </div>
+        <div>Preço: {type === "public" ? `${selectedHours.length * 5}€` : `${selectedHours.length * 8}€`}</div>
         {errorMessage ? <p className={styles.errorMessage}>{errorMessage}</p> : null}
         <button className={styles.submit} onClick={handleSubmit}>Confirmar</button>
       </div>

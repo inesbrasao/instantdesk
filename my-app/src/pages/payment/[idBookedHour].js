@@ -52,8 +52,8 @@ export default function Payment() {
         <div>{bookingInfo.email}</div>
         <div>{bookingInfo.phone}</div>
         <div>{bookingInfo.date}</div>
-        <div>{bookingInfo.hour}</div>
-        {bookingInfo.type === "public" ? <div>Preço: 5€</div> : <div>Preço: 8€</div>}
+        {bookingInfo.hour.map(e => <div key={e}>{e}</div>)}
+        {bookingInfo.type === "public" ? `${bookingInfo.hour.length * 5}€` : `${bookingInfo.hour.length * 8}€`}
         </div>}
         <div>Pagamento por MbWay</div>
         <form onSubmit={handleSubmit}>
