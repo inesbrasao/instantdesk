@@ -1,4 +1,5 @@
 
+import NavBar from '../app/components/NavBar'
 import styles from '../styles/chek.module.css'
 
 export default function Confirmation () {
@@ -13,6 +14,7 @@ export default function Confirmation () {
         <p>você receberá em seu e-mail com </p> 
         <p>todos os dados da reserva.</p>
         </div>
+        <NavBar/>
         </>
     )
 
