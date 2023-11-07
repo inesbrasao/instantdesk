@@ -5,6 +5,9 @@
     font-size: var(--font-size-h3);
     font-family: var(--font-style-heading);
     margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    
 }
 
 .check {
