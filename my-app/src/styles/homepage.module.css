@@ -22,7 +22,7 @@
 
 }
 
-.disableHour {
+.disabledHour {
     width: 4rem;
     height: 2.5rem;
     font-size: 1.25rem;
@@ -99,4 +99,8 @@
     font-family: var(--font-style-heading);
     font-size: 1rem;
 
+}
+
+.selected {
+    background-color: burlywood;
 }
