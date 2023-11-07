@@ -1,5 +1,6 @@
 import { useRouter } from "next/router"
 import ReservationForm from "../../app/components/ReservationForm"
+import styles from '../../styles/reservationForm.module.css'
 
 
 
@@ -10,5 +11,11 @@ export default function Reservation() {
   
 
 
-  return <div><ReservationForm id={id}/></div>
+  return <div className={styles.reservationContainer}>
+   <div> <h2>Informações da reserva</h2>
+   </div>
+   <div>
+    <ReservationForm id={id}/>
+    </div>
+    </div>
 }
