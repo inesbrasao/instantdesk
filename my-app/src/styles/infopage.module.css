@@ -75,7 +75,6 @@
 }
 
 .main {
-    margin-bottom: 200px;
     align-items: center;
 }
 
@@ -89,5 +88,5 @@
 .mapa {
     justify-content: center;
     align-items: center;
-    padding-left: 20%;
+    padding-left: 20px;
 }
