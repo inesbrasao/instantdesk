@@ -1,5 +1,5 @@
 import { useRouter } from "next/router"
-import ReservationForm from "../app/components/ReservationForm"
+import ReservationForm from "../../app/components/ReservationForm"
 
 
 
