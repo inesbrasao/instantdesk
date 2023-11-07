@@ -1,7 +1,7 @@
 import { useRouter } from "next/router"
 import styles from '../../styles/payment.module.css'
-
 import { useState } from "react"
+import Popup from "../../app/components/Popup"
 
 
 
@@ -39,8 +39,13 @@ export default function Payment() {
   const handleSubmit = (e) => {
     e.preventDefault()
     setTimeout(() => {
-        changeURL();
-      }, 5000); 
+        popup;
+      }, 5000);
+      changeURL()
+  }
+
+  const popup = () => {
+    <Popup />
   }
 
   
