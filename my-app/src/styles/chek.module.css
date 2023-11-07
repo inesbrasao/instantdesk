@@ -1,0 +1,16 @@
+.cp {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: var(--font-size-h3);
+    font-family: var(--font-style-heading);
+    margin-top: 200px;
+}
+
+.check {
+    
+    font-size: var(--font-size-h3);
+    font-family: var(--font-style-heading);
+
+}    
+

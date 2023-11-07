@@ -6,15 +6,17 @@
     height: 3rem;
     position: fixed;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    position: fixed;
+    bottom: 0;
 }
-
+ß
 .button {
     background-color: #eee;
     border: none;
     padding: 1rem;
     font-size: 1rem;
-    width: 10em;
+    width: 100%;
     border-radius: 1rem;
     color: lightcoral;
     box-shadow: 0 0.4rem #dfd9d9;
@@ -28,7 +30,7 @@
    }
    
    .button:hover:not(:disabled) {
-    background: rgb(28, 4, 4);
+    background: black;
     color: white;
     text-shadow: 0 0.1rem #bcb4b4;
    }
