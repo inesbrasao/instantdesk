@@ -38,4 +38,24 @@
 
 .logo {
     background-color: transparent;
+    margin-left: 20px;
+}
+
+.imgwrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.img {
+    width: 250px;
+}
+
+.infowrapper {
+    margin: 20px;
+    font-family: var(--font-style-heading);
+    color: var(--secondarycolor);
+
 }
