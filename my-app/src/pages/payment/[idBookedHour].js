@@ -42,7 +42,7 @@ export default function Payment() {
     e.preventDefault()
     setTimeout(() => {
         changeURL();
-      }, 50000);
+      }, 7000);
       setPopup(true)
   }
 
@@ -64,7 +64,7 @@ export default function Payment() {
             <input type="text" className={styles.inputText} placeholder="  888 888 888"/></div>
             <input type="submit" value="Pagar" className={styles.submit}/>
         </form>
-        <NavBar />
+        
         {popup ? <Popup /> : null}
-  </div>}</>
+  </div>}<NavBar /></>
 }
