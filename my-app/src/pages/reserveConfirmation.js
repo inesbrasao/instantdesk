@@ -10,9 +10,8 @@ export default function Confirmation () {
         <div className={styles.logo}>
         <img src="icons/check.png"  width={150} height={150}/> 
         </div>
-        <p>sua reserva foi feita com sucesso!</p>
-        <p>você receberá em seu e-mail com 
-        todos os dados da reserva.</p>
+        <p>A sua reserva foi feita com sucesso!</p>
+        <p>Receberá no seu e-mail todos os dados da reserva.</p>
         </div></div>
         <NavBar/>
         </>
