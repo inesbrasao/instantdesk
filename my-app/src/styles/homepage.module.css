@@ -104,3 +104,7 @@
 .selected {
     background-color: burlywood;
 }
+
+.logo {
+    margin-left: 20px;
+}

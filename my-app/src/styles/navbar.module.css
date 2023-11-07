@@ -1,4 +1,4 @@
-.nav {
+/* .nav {
     padding: 0;
     margin: 0;
     display: flex;
@@ -38,4 +38,30 @@
    .button:disabled {
     cursor: auto;
     color: grey;
-   }
+   } */
+
+.nav{
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: var(--secondarycolor);
+    position: fixed;
+    height: 3.5rem;
+    width: 100vw;
+}
+
+.icon{
+    height: 30px;
+    width: 30px;
+}
+
+.iconHome{
+    height: 25px;
+    width: 25px;
+}
+
+.button{
+    background-color: transparent;
+    border: none;
+}

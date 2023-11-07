@@ -3,10 +3,18 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '../styles/index.module.css'
 import NavBar from '../app/components/NavBar'
+import { useRouter } from 'next/router'
 
 const inter = Inter({ subsets: ['latin'] })
 
+
 export default function Home() {
+  const router = useRouter()
+
+  const handleClick = () => {
+    router.push(`/home`)
+  }
+
   return (
     <>
     <div className={styles.indexMain}>
@@ -16,12 +24,12 @@ export default function Home() {
     </div>
 
     <div className={styles.p}>
-      <p>Venha trabalhar no melhor cowork de lisboa!</p>
-      <p> Reserve em dois clicks seu horário!</p>
+      <div>Cowork Simplificado</div>
+      <div>Reserve com dois clicks o seu horário!</div>
     </div>
 
     <div className={styles.button}>
-      <button className={styles.button1}>reservar</button>  
+      <button className={styles.button1} onClick={handleClick}>reservar</button>  
     </div>
 
     </div>
