@@ -10,7 +10,7 @@
     position: fixed;
     bottom: 0;
 }
-
+ß
 .button {
     background-color: #eee;
     border: none;
@@ -30,7 +30,7 @@
    }
    
    .button:hover:not(:disabled) {
-    background: var(--secondarycolor);
+    background: black;
     color: white;
     text-shadow: 0 0.1rem #bcb4b4;
    }
