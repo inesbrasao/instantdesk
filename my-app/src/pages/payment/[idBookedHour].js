@@ -42,7 +42,7 @@ export default function Payment() {
     e.preventDefault()
     setTimeout(() => {
         changeURL();
-      }, 7000);
+      }, 5000);
       setPopup(true)
   }
 
