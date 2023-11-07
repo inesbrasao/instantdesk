@@ -25,7 +25,7 @@ export default function Home() {
 
     <div className={styles.p}>
       <div>Cowork Simplificado</div>
-      <div>Reserve seu horário em poucos clicks!</div>
+      <div>Reserve o seu horário em poucos clicks!</div>
     </div>
 
     <div className={styles.button}>
