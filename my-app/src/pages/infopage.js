@@ -19,7 +19,7 @@ export default function Page() {
                     </p></div>
                 <h2>Galéria</h2>
                 <div>
-                    <img src="/INK-BIZ.jpg"></img>
+                    <img src="/icons/INK-BIZ.jpg"/>
                     <img src="/USE-1.jpg"></img>
                     <img src="/benefits-of-shared.jpg"></img>
                 </div>
