@@ -61,3 +61,7 @@
     font-size: var(--font-size-paragraph-1);
 
 }
+
+.logoWrapper{
+  margin-left: 20px;
+}

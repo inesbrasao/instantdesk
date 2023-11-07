@@ -14,7 +14,7 @@ export default function Home() {
   const handleClick = () => {
     router.push(`/home`)
   }
-  
+
   return (
     <>
     <div className={styles.indexMain}>
@@ -24,8 +24,8 @@ export default function Home() {
     </div>
 
     <div className={styles.p}>
-      <p>Cowork Simplificado</p>
-      <p>Reserve com dois clicks o seu horário!</p>
+      <div>Cowork Simplificado</div>
+      <div>Reserve com dois clicks o seu horário!</div>
     </div>
 
     <div className={styles.button}>

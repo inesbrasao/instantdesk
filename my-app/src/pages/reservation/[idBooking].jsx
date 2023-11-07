@@ -12,7 +12,9 @@ export default function Reservation() {
   
 
 
-  return <div className={styles.reservationContainer}>
+  return <>
+    <div className={styles.logoWrapper}><img className={styles.logo} src="/icons/3.png" /></div>
+  <div className={styles.reservationContainer}>
    <div> <h2>Informações da reserva</h2>
    </div>
    <div>
@@ -20,4 +22,5 @@ export default function Reservation() {
     </div>
     <NavBar />
     </div>
+    </>
 }

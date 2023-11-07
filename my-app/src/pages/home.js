@@ -37,6 +37,7 @@ export default function Home() {
   }, [date, type])
 
   const handleChange = (e) => {
+    setErrorMessage()
     setDate(e.target.value);
   };
 
@@ -79,6 +80,7 @@ export default function Home() {
 
   return (
     <>
+      <div className={styles.logoWrapper}><img className={styles.logo} src="/icons/3.png" /></div>
       <div className={styles.homeContainer}>
         <div className={styles.formContainer}>
           <div>
