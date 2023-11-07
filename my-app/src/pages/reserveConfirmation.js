@@ -1,3 +1,4 @@
+
 import styles from '../styles/chek.module.css'
 
 export default function Confirmation () {
@@ -13,4 +14,5 @@ export default function Confirmation () {
         </div>
         </>
     )
+
 }
