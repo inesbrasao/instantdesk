@@ -43,6 +43,7 @@ export default function Home() {
 
   const handleSelectChange = (e) => {
     setType(e.target.value)
+    setSelectedHours([])
   }
 
   const handleHourClick = (hour) => {
