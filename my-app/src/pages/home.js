@@ -119,7 +119,7 @@ export default function Home() {
             </div>
             : null}
         </div>
-        {selectedHours.length > 0 ? <div>Preço: {type === "public" ? `${selectedHours.length * 5}€` : `${selectedHours.length * 8}€`}</div> : null}
+        {selectedHours.length > 0 ? <div className={styles.price}>Valor da reserva: {type === "public" ? `${selectedHours.length * 5}€` : `${selectedHours.length * 8}€`}</div> : null}
         {errorMessage ? <p className={styles.errorMessage}>{errorMessage}</p> : null}
         <button className={styles.submit} onClick={handleSubmit}>Confirmar</button>
       </div>
