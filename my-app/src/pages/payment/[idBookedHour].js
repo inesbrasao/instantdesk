@@ -1,5 +1,6 @@
 import { useRouter } from "next/router"
-import ReservationForm from "../../app/components/ReservationForm"
+import styles from '../../styles/payment.module.css'
+
 import { useState } from "react"
 
 
@@ -45,21 +46,21 @@ export default function Payment() {
   
 
 
-  return <div>
-    {bookingInfo && <div>
+  return bookingInfo && <div className={styles.paymentContainer}>
         <h3>Dados da Marcação:</h3>
-        <div>{bookingInfo.name}</div>
-        <div>{bookingInfo.email}</div>
-        <div>{bookingInfo.phone}</div>
-        <div>{bookingInfo.date}</div>
-        {bookingInfo.hour.map(e => <div key={e}>{e}</div>)}
-        {bookingInfo.type === "public" ? `${bookingInfo.hour.length * 5}€` : `${bookingInfo.hour.length * 8}€`}
+    {bookingInfo && <div className={styles.confirmation}>
+        <div><h4>Nome:</h4> {bookingInfo.name}</div>
+        <div><h4>Email:</h4> {bookingInfo.email}</div>
+        <div><h4>Telemóvel:</h4> {bookingInfo.phone}</div>
+        <div><h4>Dia:</h4> {bookingInfo.date}</div>
+        <div><h4>Hora:</h4> {bookingInfo.hour.map(e => <div key={e}>{e}</div>)}</div>
+        <div><h4>Preço:</h4> {bookingInfo.type === "public" ? `${bookingInfo.hour.length * 5}€` : `${bookingInfo.hour.length * 8}€`}</div>
         </div>}
-        <div>Pagamento por MbWay</div>
-        <form onSubmit={handleSubmit}>
-            <label>Telemóvel:</label>
-            <input type="text"/>
-            <input type="submit" value="Pagar"/>
+        <div><h3>Pagamento por MbWay</h3></div>
+        <form className={styles.form} onSubmit={handleSubmit}>
+        <div className={styles.inputContainer}><label className={styles.labelInputText}>Telemóvel:</label>
+            <input type="text" className={styles.inputText} placeholder="  888 888 888"/></div>
+            <input type="submit" value="Pagar" className={styles.submit}/>
         </form>
   </div>
 }
