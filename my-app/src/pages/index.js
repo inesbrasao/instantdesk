@@ -21,7 +21,7 @@ export default function Home() {
     </div>
 
     <div className={styles.button}>
-      <button className={styles.reserve}>reservar</button>  
+      <button className={styles.button1}>reservar</button>  
     </div>
 
     </div>
