@@ -2,11 +2,13 @@ import { useRouter } from "next/router"
 import styles from '../../styles/payment.module.css'
 import { useState } from "react"
 import Popup from "../../app/components/Popup"
+import NavBar from "../../app/components/NavBar"
 
 
 
 export default function Payment() {
   const [bookingInfo, setBookingInfo] = useState()
+  const [popup, setPopup] = useState(false)
   const router = useRouter()
   const id = router.query.idBookedHour
 
@@ -39,16 +41,10 @@ export default function Payment() {
   const handleSubmit = (e) => {
     e.preventDefault()
     setTimeout(() => {
-        popup;
-      }, 5000);
-      changeURL()
+        changeURL();
+      }, 50000);
+      setPopup(true)
   }
-
-  const popup = () => {
-    <Popup />
-  }
-
-  
 
 
   return <>
@@ -68,5 +64,7 @@ export default function Payment() {
             <input type="text" className={styles.inputText} placeholder="  888 888 888"/></div>
             <input type="submit" value="Pagar" className={styles.submit}/>
         </form>
+        <NavBar />
+        {popup ? <Popup /> : null}
   </div>}</>
 }

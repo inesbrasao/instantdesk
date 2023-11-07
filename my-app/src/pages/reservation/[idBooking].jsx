@@ -12,9 +12,9 @@ export default function Reservation() {
 
   return <>
     <div className={styles.logoWrapper}><img className={styles.logo} src="/icons/3.png" /></div>
-  <div className={styles.reservationContainer}>
-   <div> <h2>Informações da reserva</h2>
-   </div>
+    <div className={styles.reservationContainer}>
+    <div> <h2>Informações da reserva</h2>
+    </div>
    <div>
     <ReservationForm id={id}/>
     </div>
