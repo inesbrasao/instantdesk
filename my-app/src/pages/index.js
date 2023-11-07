@@ -29,8 +29,8 @@ export default function Home() {
     </div>
 
     <div className={styles.button}>
-      <button className={styles.button1} onClick={handleClick}>reservar</button>  
-      <button>Conheça o nosso Espaço</button>
+      <button className={styles.button1} onClick={handleClick}><spam>Reservar</spam></button>  
+      <button className={styles.button2} onClick={() => router.push('/infopage')} >Conheça o nosso Espaço</button>
     </div>
 
     </div>
