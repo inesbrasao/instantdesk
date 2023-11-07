@@ -46,7 +46,7 @@ export default function Payment() {
   
 
 
-  return <div className={styles.paymentContainer}>
+  return bookingInfo && <div className={styles.paymentContainer}>
         <h3>Dados da Marcação:</h3>
     {bookingInfo && <div className={styles.confirmation}>
         <div><h4>Nome:</h4> {bookingInfo.name}</div>
