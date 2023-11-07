@@ -8,9 +8,7 @@ import NavBar from "../../app/components/NavBar"
 export default function Reservation() {
   const router = useRouter()
   const id = router.query.idBooking
-  console.log(id)
   
-
 
   return <>
     <div className={styles.logoWrapper}><img className={styles.logo} src="/icons/3.png" /></div>

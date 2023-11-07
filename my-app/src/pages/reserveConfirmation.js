@@ -4,6 +4,7 @@ import styles from '../styles/chek.module.css'
 export default function Confirmation () {
     return (
         <>
+        <div className={styles.logoWrapper}><img className={styles.logo} src="/icons/3.png" /></div>
         <div className={styles.cp}> 
         <div className={styles.logo}>
         <img src="icons/check.png" /> 
