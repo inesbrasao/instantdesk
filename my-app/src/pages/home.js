@@ -120,7 +120,7 @@ export default function Home() {
         {errorMessage ? <p className={styles.errorMessage}>{errorMessage}</p> : null}
         <button className={styles.submit} onClick={handleSubmit}>Confirmar</button>
       </div>
-      {/* <NavBar/> */}
+      <NavBar/>
     </>
   );
 };
