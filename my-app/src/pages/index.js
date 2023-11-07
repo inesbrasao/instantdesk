@@ -20,12 +20,12 @@ export default function Home() {
     <div className={styles.indexMain}>
    
     <div className={styles.logo}> 
-    <img src='/icons/logo.png' width={300} height={300}/> 
+    <img src='/icons/logo.png' width={200} height={200}/> 
     </div>
 
     <div className={styles.p}>
       <div>Cowork Simplificado</div>
-      <div>Reserve com dois clicks o seu horário!</div>
+      <div>Reserve seu horário em poucos clicks!</div>
     </div>
 
     <div className={styles.button}>
