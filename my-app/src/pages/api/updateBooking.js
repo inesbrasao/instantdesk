@@ -5,7 +5,6 @@ export default async function updateBooking(req, res) {
         const {id, data} = req.body
         console.log(data)
         if(!data || !data.name || !data.email || !data.phone){
-            console.log("oi")
             res.status(412).json({message: "Todos os campos são obrigatórios"})
         } else {
             const result = await updateById(id, data)
