@@ -8,7 +8,7 @@ export default function Page() {
         <div class="sqs-html-content">
             <div className={styles.indexMain}>
                 <div className={styles.logo}>
-                    <img src='/icons/logo.png' width={300} height={300} />
+                    <img src='/icons/logo.png' width={200} height={200} />
                 </div>
                 <div>
                     <h2>Sobre Nós</h2>
