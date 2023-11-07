@@ -51,27 +51,30 @@ export default function ReservationForm({id}) {
 
 
 
-  return <div>
-  <div className={styles.ProfileControlContainer}>
+  return <>
+  
     
     <form  className={styles.form} onSubmit={handleSubmit} id="profileControl">
         
+    <div className={styles.formContainer}>
     <div className={styles.containerInputText} >
       <label htmlFor="name" className={styles.labelInputText}>Nome</label> 
-      <input className={styles.inputText} type="text" id="name" name="name"  onChange={handleChange}/>
+      <input className={styles.inputText} type="text" id="name" name="name"  onChange={handleChange} placeholder="Seu nome"/>
     </div>
     <div className={styles.containerInputText} >
       <label htmlFor="email" className={styles.labelInputText}>Email</label> 
-      <input className={styles.inputText} type="text" id="email" name="email"  onChange={handleChange}/>
+      <input className={styles.inputText} type="text" id="email" name="email"  onChange={handleChange} placeholder="user@email.com"/>
     </div>
     <div className={styles.containerInputText} >
       <label htmlFor="phone" className={styles.labelInputText}>Telemóvel</label> 
-      <input className={styles.inputText} type="text" id="phone" name="phone"  onChange={handleChange}/>
+      <input className={styles.inputText} type="text" id="phone" name="phone"  onChange={handleChange}
+      placeholder="+351 888 888 888"/>
     </div>
       {errorMessage ? <p>{errorMessage}</p> : null}
-      <button className={styles.button} type="submit" >Alterar</button>
+      </div>
+      <button className={styles.submit} type="submit">Gerar Reserva</button>
     </form>
-  </div>
-  </div>
+  
+  </>
 
 }

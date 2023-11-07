@@ -1,7 +1,34 @@
+.reservationContainer{
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.formContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.form{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+.reservationContainer h2{
+  font-family: var(--font-style-heading);
+  color: var(--secondarycolor);
+  font-size: 1.75rem;
+}
+
+
+
 .containerInputText {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 4px;
     justify-content: center;
   }
   
@@ -23,3 +50,14 @@
     border-radius:0.25rem;
   
   }
+  .submit {
+    border-radius: 0.25rem;
+    width: 40vw;
+    height: 2.5rem;
+    background-color: var(--secondarycolor);
+    border: none;
+    color: var(--primarycolor);
+    font-family: var(--font-style-heading);
+    font-size: var(--font-size-paragraph-1);
+
+}
