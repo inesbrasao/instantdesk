@@ -102,7 +102,7 @@ export default function Home() {
               <div><h3>Qual horário?</h3></div>
               <div className={styles.hourWrapper}>
                 {arrayHours.map((e) => {
-                  const isDisabled = bookedHours.some((hour) => type === "public" ? hour[0] === e && hour[1] >= 2 : hour[0] === e && hour[1] >= 1);
+                  const isDisabled = bookedHours.some((hour) => type === "public" ? hour[0] === e && hour[1] >= 10 : hour[0] === e && hour[1] >= 2);
                   const isSelected = selectedHours.includes(e);
                   return (
                     <button
