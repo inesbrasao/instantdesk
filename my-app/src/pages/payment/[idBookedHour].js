@@ -32,7 +32,7 @@ export default function Payment() {
   fetchData()
 
   const changeURL = () => {
-    router.push(`/home`)
+    router.push(`/reserveConfirmation`)
   }
 
   const handleSubmit = (e) => {
@@ -53,6 +53,7 @@ export default function Payment() {
         <div>{bookingInfo.phone}</div>
         <div>{bookingInfo.date}</div>
         <div>{bookingInfo.hour}</div>
+        {bookingInfo.type === "public" ? <div>Preço: 5€</div> : <div>Preço: 8€</div>}
         </div>}
         <div>Pagamento por MbWay</div>
         <form onSubmit={handleSubmit}>
