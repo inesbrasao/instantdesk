@@ -10,11 +10,13 @@ async function filterByDate(date, type) {
     const bookedHours = new Map()
 
     for(let i = 0; i < hours.length; i++){
-        if(bookedHours.has(hours[i].hour)){
-            let value = bookedHours.get(hours[i].hour)
-            bookedHours.set(hours[i].hour, value + 1)
+        for(let j = 0; j < hours[i].hour.length; j++){
+            if(bookedHours.has(hours[i].hour[j])){
+            let value = bookedHours.get(hours[i].hour[j])
+            bookedHours.set(hours[i].hour[j], value + 1)
         } else {
-            bookedHours.set(hours[i].hour, 1)
+            bookedHours.set(hours[i].hour[j], 1)
+        }
         }
     }
     

@@ -37,11 +37,13 @@ export default function Home() {
   }, [date, type])
 
   const handleChange = (e) => {
+    setErrorMessage()
     setDate(e.target.value);
   };
 
   const handleSelectChange = (e) => {
     setType(e.target.value)
+    setSelectedHours([])
   }
 
   const handleHourClick = (hour) => {
@@ -79,10 +81,11 @@ export default function Home() {
 
   return (
     <>
+      <div className={styles.logoWrapper}><img className={styles.logo} src="/icons/3.png" /></div>
       <div className={styles.homeContainer}>
         <div className={styles.formContainer}>
           <div>
-            <label className={styles.label}><h3>Que tipo de espaço necessita?</h3></label>
+            <label className={styles.label}><h3>Que tipo de lugar necessita?</h3></label>
             <select name="type" className={styles.type} onChange={handleSelectChange}>
               <option className={styles.options} value="public">Lugar Público</option>
               <option className={styles.options} value="private">Lugar Privado</option>
@@ -99,7 +102,7 @@ export default function Home() {
               <div><h3>Qual horário?</h3></div>
               <div className={styles.hourWrapper}>
                 {arrayHours.map((e) => {
-                  const isDisabled = bookedHours.some((hour) => hour[0] === e && hour[1] >= 20);
+                  const isDisabled = bookedHours.some((hour) => type === "public" ? hour[0] === e && hour[1] >= 2 : hour[0] === e && hour[1] >= 1);
                   const isSelected = selectedHours.includes(e);
                   return (
                     <button
@@ -116,11 +119,11 @@ export default function Home() {
             </div>
             : null}
         </div>
-        <div>Preço: {type === "public" ? `${selectedHours.length * 5}€` : `${selectedHours.length * 8}€`}</div>
+        {selectedHours.length > 0 ? <div className={styles.price}>Valor da reserva: {type === "public" ? `${selectedHours.length * 5}€` : `${selectedHours.length * 8}€`}</div> : null}
         {errorMessage ? <p className={styles.errorMessage}>{errorMessage}</p> : null}
         <button className={styles.submit} onClick={handleSubmit}>Confirmar</button>
       </div>
-      {/* <NavBar/> */}
+      <NavBar/>
     </>
   );
 };

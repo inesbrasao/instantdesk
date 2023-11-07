@@ -94,6 +94,15 @@
     font-size: var(--font-size-paragraph-1);
 
 }
+.price {
+ 
+    height: 2.5rem;
+   
+    color: var(--secondarycolor);
+    font-family: var(--font-style-heading);
+    font-size: var(--font-size-paragraph-1);
+
+}
 
 .errorMessage {
     font-family: var(--font-style-heading);
@@ -103,4 +112,8 @@
 
 .selected {
     background-color: burlywood;
+}
+
+.logo {
+    margin-left: 20px;
 }
